@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlQuery", "SqlQuery\SqlQuery.csproj", "{561B1745-C10E-438B-AD41-3A369D05743F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E0D687D4-8523-4C4E-9046-DA01BD18CEFD} = {E0D687D4-8523-4C4E-9046-DA01BD18CEFD}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{E0D687D4-8523-4C4E-9046-DA01BD18CEFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{561B1745-C10E-438B-AD41-3A369D05743F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{561B1745-C10E-438B-AD41-3A369D05743F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{561B1745-C10E-438B-AD41-3A369D05743F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{561B1745-C10E-438B-AD41-3A369D05743F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D687D4-8523-4C4E-9046-DA01BD18CEFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D687D4-8523-4C4E-9046-DA01BD18CEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D687D4-8523-4C4E-9046-DA01BD18CEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D687D4-8523-4C4E-9046-DA01BD18CEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE47C163-E276-46C4-AEE3-67B7FD04373F}
+	EndGlobalSection
+EndGlobal

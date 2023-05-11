@@ -1,0 +1,31 @@
+﻿<Window x:Class="SqlQuery.Views.StartupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SqlQuery.Views"
+        xmlns:viewmodels="clr-namespace:SqlQuery.ViewModels"
+        WindowStartupLocation="CenterScreen"
+        d:DataContext="{d:DesignInstance Type=viewmodels:StartupWindowVM}"
+        mc:Ignorable="d"
+        Title="连接到 SQL Server" Height="160" Width="300">
+    <Grid Margin="5" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="服务器名称" Margin="5" Grid.Column="0" Grid.Row="0"/>
+        <TextBlock Text="登录名" Margin="5" Grid.Column="0" Grid.Row="1"/>
+        <TextBlock Text="密码" Margin="5" Grid.Column="0" Grid.Row="2"/>
+        <TextBox Margin="5" Grid.Column="1" Grid.Row="0" Text="{Binding HostName}"/>
+        <TextBox Margin="5" Grid.Column="1" Grid.Row="1" Text="{Binding Username}"/>
+        <PasswordBox Margin="5" Grid.Column="1" Grid.Row="2" Password="94254694" PasswordChanged="PasswordChanged"/>
+        <Button Content=" 连接 " Margin="5" Grid.Column="1" Grid.Row="3" Click="ConnButtonClick" HorizontalAlignment="Right"/>
+    </Grid>
+</Window>

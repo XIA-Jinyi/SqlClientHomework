@@ -1,0 +1,35 @@
+﻿<Window x:Class="SqlQuery.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SqlQuery.Views"
+        xmlns:viewmodels="clr-namespace:SqlQuery.ViewModels"
+        WindowStartupLocation="CenterScreen"
+        d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowVM}"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="用户管理系统" Height="130" Width="250">
+    <Grid Margin="5" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="用户名　" Margin="5" Grid.Column="0" Grid.Row="0"/>
+            <TextBlock Text="密　码　" Margin="5" Grid.Column="0" Grid.Row="1"/>
+            <TextBox x:Name="UidBox" Text="{Binding Username}" AcceptsReturn="False" AcceptsTab="False" Margin="5" Grid.Column="1" Grid.Row="0" IsEnabled="{Binding IsButtonEnabled}"/>
+            <PasswordBox x:Name="PwdBox" Margin="5" Grid.Column="1" Grid.Row="2" PasswordChanged="PasswordChanged" IsEnabled="{Binding IsButtonEnabled}"/>
+        </Grid>
+        <Button x:Name="RegisterButton" Content=" 注册新用户 " HorizontalAlignment="Left" Margin="5" Grid.Row="1" IsEnabled="{Binding IsButtonEnabled}" Click="RegisterButtonClick"/>
+        <Button x:Name="LoginButton" Content=" 登录 " HorizontalAlignment="Right" Margin="5" Grid.Row="1" IsDefault="True" IsEnabled="{Binding IsButtonEnabled}" Click="LoginButtonClick"/>
+    </Grid>
+</Window>
