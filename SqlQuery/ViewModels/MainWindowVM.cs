@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace SqlQuery.ViewModels
 {
@@ -31,7 +21,6 @@ namespace SqlQuery.ViewModels
         public void Register()
         {
             IsButtonEnabled = false;
-            // MessageBox.Show($"用户名: {username}\n密　码: {password}", "Register");
             LocalServices.Register(username, password);
             IsButtonEnabled = true;
         }
@@ -39,7 +28,6 @@ namespace SqlQuery.ViewModels
         public void Login()
         {
             IsButtonEnabled = false;
-            // MessageBox.Show($"用户名: {username}\n密　码: {password}", "Login");
             LocalServices.Login(username, password);
             IsButtonEnabled = true;
         }

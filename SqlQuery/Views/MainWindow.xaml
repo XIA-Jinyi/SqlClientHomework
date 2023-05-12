@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:SqlQuery.Views"
         xmlns:viewmodels="clr-namespace:SqlQuery.ViewModels"
         WindowStartupLocation="CenterScreen"
+        Closing="WindowClosing"
         d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowVM}"
         mc:Ignorable="d"
         ResizeMode="CanMinimize"

@@ -23,6 +23,7 @@
         <TextBlock Text="服务器名称" Margin="5" Grid.Column="0" Grid.Row="0"/>
         <TextBlock Text="登录名" Margin="5" Grid.Column="0" Grid.Row="1"/>
         <TextBlock Text="密码" Margin="5" Grid.Column="0" Grid.Row="2"/>
+        <TextBlock Text="作者：夏锦熠、黄凯博" Margin="5" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         <TextBox Margin="5" Grid.Column="1" Grid.Row="0" Text="{Binding HostName}"/>
         <TextBox Margin="5" Grid.Column="1" Grid.Row="1" Text="{Binding Username}"/>
         <PasswordBox Margin="5" Grid.Column="1" Grid.Row="2" Password="94254694" PasswordChanged="PasswordChanged"/>
