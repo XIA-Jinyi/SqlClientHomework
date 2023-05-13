@@ -91,8 +91,11 @@ namespace SqlQuery
             }
             try
             {
-                DataSet result = sqlHelper.Query($"SELECT * FROM StudentCourse.dbo.UserTable WHERE username='{username}' AND password='{password.GetHashCode()}';");
-                if (result.Tables.Count > 0 && result.Tables[0].Rows.Count > 0)
+                DataSet result = sqlHelper.Query($"SELECT username, password FROM StudentCourse.dbo.UserTable WHERE username='{username}';");
+                if (result.Tables.Count > 0 &&
+                    result.Tables[0].Rows.Count > 0 &&
+                    username == (string)result.Tables[0].Rows[0]["username"] &&
+                    ((string)result.Tables[0].Rows[0]["password"]).StartsWith($"{password.GetHashCode()}"))
                 {
                     MessageBox.Show("验证成功！", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
