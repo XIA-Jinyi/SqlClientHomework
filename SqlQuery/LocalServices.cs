@@ -8,13 +8,26 @@ namespace SqlQuery
 {
     static class LocalServices
     {
+        /// <summary>
+        /// SQL 连接辅助对象。
+        /// </summary>
         private static SqlHelper sqlHelper = null;
 
+        /// <summary>
+        /// 测试 SQL 连接状态。
+        /// </summary>
+        /// <returns>若连接处于开启状态，返回 <c>true</c>；否则返回 <c>false</c>。</returns>
         public static bool TestConn()
         {
             return sqlHelper != null && sqlHelper.TestConnection();
         }
 
+        /// <summary>
+        /// 连接 SQL Server 服务器。
+        /// </summary>
+        /// <param name="host">服务器主机名</param>
+        /// <param name="user">SQL Server 登录名</param>
+        /// <param name="password">密码</param>
         public static void Connect(string host, string user, string password)
         {
             SqlHelper helper = new SqlHelper();
@@ -30,6 +43,11 @@ namespace SqlQuery
             sqlHelper = helper;
         }
 
+        /// <summary>
+        /// 注册管理系统的用户。
+        /// </summary>
+        /// <param name="username">用户名</param>
+        /// <param name="password">密码</param>
         public static void Register(string username, string password)
         {
             if (username == null || password == null || username == String.Empty || password == String.Empty)
@@ -54,6 +72,11 @@ namespace SqlQuery
             MessageBox.Show("注册成功！", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
+        /// <summary>
+        /// 验证用户能否登录到管理系统。
+        /// </summary>
+        /// <param name="username">用户名</param>
+        /// <param name="password">密码</param>
         public static void Login(string username, string password)
         {
             if (username == null || password == null || username == String.Empty || password == String.Empty)
@@ -85,6 +108,9 @@ namespace SqlQuery
             }
         }
 
+        /// <summary>
+        /// 关闭 SQL 连接。
+        /// </summary>
         public static void CloseConn()
         {
             sqlHelper?.Close();
